@@ -1,0 +1,86 @@
+@media only screen and (max-width: 1320px) {
+  header {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  header {
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .nav-bar ul li a {
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #fefefe;
+    margin: 6px 0;
+    transition: 0.5s;
+  }
+
+  /* Rotace první příčky */
+  .change .line1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+
+  /* Zmizení druhé příčky */
+  .change .line2 {
+    opacity: 0;
+  }
+
+  /* Rotace třetí příčky */
+  .change .line3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+  .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 89px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #10121bde;
+    transition: 0.5s;
+    overflow: hidden;
+    /* opacity: 0.85; */
+  }
+
+  .nav-bar.active {
+    height: 450px;
+  }
+
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    /* width: 230px; */
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    /* opacity: 0; */
+  }
+
+  .nav-bar.active ul {
+    opacity: 1;
+  }
+
+  .nav-bar ul li a {
+    margin-bottom: 12px;
+    padding: 10px 25px;
+  }
+}
